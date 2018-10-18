@@ -141,7 +141,7 @@ init_vars(void)
 	/* AES256-SHA              SSLv3 Kx=RSA      Au=RSA  Enc=AES(256) */
 	/* RC4-MD5                 SSLv3 Kx=RSA      Au=RSA  Enc=RC4(128) */
 	/* RSA_decrypt() is 15x slower (used for Kx) than RSA_encrypt() */
-	SSL_CTX_set_cipher_list(g_opt.ctx, "AES256-SHA:RC4-MD5");
+	SSL_CTX_set_cipher_list(g_opt.ctx, "EECDH+AESGCM:EDH+AESGCM:AES256+EECDH:AES256+EDH");
 	//SSL_CTX_set_cipher_list(g_opt.ctx, "AES256-SHA");
 	//SSL_CTX_set_cipher_list(g_opt.ctx, "RC4-MD5");
 	//SSL_CTX_set_options(g_opt.ctx, SSL_OP_NO_TLSv1);
